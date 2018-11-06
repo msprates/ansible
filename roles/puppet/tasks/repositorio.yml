@@ -1,0 +1,12 @@
+---
+
+- yum:
+    name: https://yum.puppet.com/puppet6/puppet6-release-el-7.noarch.rpm 
+    state: present
+  when: ansible_distribution == 'CentOS'
+
+- apt:
+    deb: https://apt.puppetlabs.com/puppet6-release-xenial.deb
+    state: present
+  when: ansible_distribution == 'Ubuntu'
+...

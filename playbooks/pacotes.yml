@@ -1,0 +1,10 @@
+---
+- hosts: dexter
+  tasks:
+    - name: Instala pacotes
+      yum:
+        name: "{{ install }}" 
+        state: present
+      yum:
+        name: "{{ remove }}"
+        state: absent
